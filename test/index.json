@@ -27,7 +27,12 @@
         {
           "file": "app.js",
           "target": "~/"
+        },
+        {
+          "file": "auth.js",
+          "target": "~/"
         }
+
       ]
     },
     "finish": {
