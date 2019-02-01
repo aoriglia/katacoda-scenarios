@@ -1,7 +1,7 @@
 
-The request gives us a list of tests.
+The previous request gave us a list of tests.
 
-Copy the following content in the file *testid.js* and replace the test id with one of your choice.
+Copy the following content in the file *vars.js* and replace **YOUR_TEST_ID_HERE** with one of your choice.
 
 <pre class="file" data-filename="vars.js" data-target="replace">
 module.exports = { test_id : 'YOUR_TEST_ID_HERE' };

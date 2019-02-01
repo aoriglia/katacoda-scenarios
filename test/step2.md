@@ -3,7 +3,7 @@ To access to the API, we need to be authenticated.
 Copy a valid access token from your account.
 https://www.neotys.com/documents/doc/nlweb/latest/en/html/#24621.htm
 
-Copy the following content in the file *auth.js* and replace the access token with your own.
+Copy the following content in the file *auth.js* and replace **YOUR_ACCESS_TOKEN_HERE** with your own.
 
 <pre class="file" data-filename="auth.js" data-target="replace">
 module.exports = { access_token : 'YOUR_ACCESS_TOKEN_HERE' };

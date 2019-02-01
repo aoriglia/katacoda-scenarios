@@ -16,6 +16,10 @@
       {
         "title": "Get an Element",
         "text": "step3.md"
+      },
+      {
+        "title": "Get The Average Duration as a Graph",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -35,8 +39,11 @@
         {
           "file": "auth.js",
           "target": "~/"
+        },
+        {
+          "file": "post.js",
+          "target": "~/"
         }
-
       ]
     },
     "finish": {
