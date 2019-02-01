@@ -1,4 +1,3 @@
-# Get the list of the tests
 To access to the API, we need to be authenticated.
 
 Copy a valid access token from your account.
@@ -11,10 +10,9 @@ module.exports = { access_token : 'YOUR_ACCESS_TOKEN_HERE' };
 </pre>
 
 Now, we have to request the list of the testIds using the operation */tests*.
-Copy the following code in the file *requests.js*:
+Copy the following code in the file *request.js*:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
-
 var auth = require('./auth');
 
 // Set the headers
@@ -39,6 +37,7 @@ request(options, function (error, response, body) {
 </pre>
 
 Execute the request:
+
 `node request.js`{{execute}}
 
 

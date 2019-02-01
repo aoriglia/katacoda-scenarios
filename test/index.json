@@ -10,11 +10,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Authentication",
+        "title": "Get All The Tests",
         "text": "step2.md"
       },
       {
-        "title": "Get some stats",
+        "title": "Get an Element",
         "text": "step3.md"
       }
     ],
@@ -26,6 +26,10 @@
       "host01": [
         {
           "file": "request.js",
+          "target": "~/"
+        },
+        {
+          "file": "vars.js",
           "target": "~/"
         },
         {
