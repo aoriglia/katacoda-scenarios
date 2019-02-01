@@ -51,6 +51,8 @@
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 80", "port": 80}],
     "uilayout": "editor-terminal"
   },
   "backend": {

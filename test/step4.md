@@ -49,7 +49,7 @@ var headers = {
 var options = {
     url: 'https://preprod-neoload-api.saas.neotys.com/v1/tests/' + vars.test_id + '/graph',
     method: 'POST',
-    body: post.json,
+    body: JSON.stringify(post.json),
     headers: headers
 }
 
