@@ -37,14 +37,15 @@ var fs   = require('fs');
 var auth = require('./auth');
 var vars = require('./vars');
 var post = require('./post');
+var file = fs.createWriteStream("graph.png");
+
 // Set the headers
 var headers = {
     'User-Agent':       'Super Agent/0.0.1',
     'Content-Type':     'application/json',
     'accept':           'image/png',
-    'accountToken':     auth.access_token,
-    'encoding' :        'binary'
-}
+    'accountToken':     auth.access_token
+ 
 
 // Configure the request
 var options = {
@@ -56,7 +57,11 @@ var options = {
 
 // Execute the request
 request(options, function (error, response, body) {
-   fs.writeFile('graph.png', body, 'binary', function (err) {});
+    if (!error && response.statusCode == 200) {
+    response.pipe(file);
+    } else {
+       console.log(body)
+    }
 })
 </pre>
 
