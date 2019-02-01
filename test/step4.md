@@ -32,17 +32,18 @@ Let's choose an element and try to get its specific average duration as a PNG im
 Copy the following code in the file *request.js*:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
+var fs   = require('fs');
 
 var auth = require('./auth');
 var vars = require('./vars');
 var post = require('./post');
-
 // Set the headers
 var headers = {
     'User-Agent':       'Super Agent/0.0.1',
     'Content-Type':     'application/json',
     'accept':           'image/png',
-    'accountToken':     auth.access_token
+    'accountToken':     auth.access_token,
+    'encoding' :        'binary'
 }
 
 // Configure the request
@@ -55,7 +56,7 @@ var options = {
 
 // Execute the request
 request(options, function (error, response, body) {
-   console.log(body)
+   fs.writeFile('graph.png', body, 'binary', function (err) {});
 })
 </pre>
 
