@@ -4,38 +4,35 @@
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
-    "steps": [{
-      "title": "Node.js Init",
-      "text": "step1.md"
-    },
+    "steps": [
+      {
+        "title": "Node.js Init",
+        "text": "step1.md"
+      },
       {
         "title": "Authentication",
-        "text": "step1.md"
-      }],
-
+        "text": "step2.md"
+      }
+    ],
     "intro": {
       "text": "intro.md",
       "credits": "Neotys (c) 2005-2019"
     },
-
-      "assets": {
-    "host01": [
-      {
-        "file": "app.js",
-        "target": "~/"
-      }
-    ]
-  },
-
+    "assets": {
+      "host01": [
+        {
+          "file": "app.js",
+          "target": "~/"
+        }
+      ]
+    },
     "finish": {
       "text": "finish.md"
     }
   },
-
   "environment": {
     "uilayout": "editor-terminal"
   },
-
   "backend": {
     "imageid": "ubuntu"
   }
