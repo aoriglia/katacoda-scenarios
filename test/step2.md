@@ -1,7 +1,19 @@
+# Get the list of the tests
+To access to the API, we need to be authenticated.
 
-Here is the app file which contains the request to the API. Copy/Paste the following content in the app.js file.
+Copy a valid access token from your account.
+https://www.neotys.com/documents/doc/nlweb/latest/en/html/#24621.htm
 
-<pre class="file" data-filename="app.js" data-target="replace">var request = require('request');
+Copy the following content in the file *auth.js* and replace the access token with your own.
+
+<pre class="file" data-filename="auth.js" data-target="replace">
+module.exports = { access_token : 'YOUR_ACCESS_TOKEN_HERE' };
+</pre>
+
+Now, we have to request the list of the testIds using the operation */tests*.
+Copy the following code in the file *requests.js*:
+
+<pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
 
 var auth = require('./auth');
 
@@ -15,7 +27,7 @@ var headers = {
 
 // Configure the request
 var options = {
-    url: 'https://preprod-neoload-api.saas.neotys.com/v1/tests/' + auth.test_id + '/statistics',
+    url: 'https://preprod-neoload-api.saas.neotys.com/v1/tests/',
     method: 'GET',
     headers: headers
 }
@@ -26,6 +38,8 @@ request(options, function (error, response, body) {
 })
 </pre>
 
-Do not forget to set your own access token and test id.
+Execute the request:
+`node request.js`{{execute}}
 
-*The default test id is the identifier of the first test of the samples auto-generated on a brand new account.*
+
+
