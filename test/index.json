@@ -12,6 +12,10 @@
       {
         "title": "Authentication",
         "text": "step2.md"
+      },
+      {
+        "title": "Get some stats",
+        "text": "step3.md"
       }
     ],
     "intro": {

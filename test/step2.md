@@ -21,12 +21,9 @@ var options = {
     headers: headers
 }
 
-// Start the request
+// Execute the request
 request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        // Print out the response body
-        console.log(body)
-    }
+   console.log(body)
 })
 </pre>
 
