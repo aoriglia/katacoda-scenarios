@@ -1,17 +1,23 @@
 {
-  "title": "Test Scenario",
-  "description": "Your First Scenario",
+  "title": "NLW API Scenario",
+  "description": "A simple scenario to learn how to use the NeoLoad Web API",
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Node.js Init",
       "text": "step1.md"
-    }],
+    },
+      {
+        "title": "Authentication",
+        "text": "step1.md"
+      }],
+
     "intro": {
       "text": "intro.md",
-      "credits": ""
+      "credits": "Neotys (c) 2005-2019"
     },
+
       "assets": {
     "host01": [
       {
@@ -20,13 +26,16 @@
       }
     ]
   },
+
     "finish": {
       "text": "finish.md"
     }
   },
+
   "environment": {
     "uilayout": "editor-terminal"
   },
+
   "backend": {
     "imageid": "ubuntu"
   }
