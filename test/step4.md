@@ -37,7 +37,6 @@ var fs   = require('fs');
 var auth = require('./auth');
 var vars = require('./vars');
 var post = require('./post');
-var file = fs.createWriteStream("graph.png");
 
 // Set the headers
 var headers = {
@@ -52,13 +51,14 @@ var options = {
     url: 'https://preprod-neoload-api.saas.neotys.com/v1/tests/' + vars.test_id + '/graph',
     method: 'POST',
     body: JSON.stringify(post.json),
-    headers: headers
+    headers: headers,
+    encoding: null
 }
 
 // Execute the request
 request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-    response.pipe(file);
+        fs.writeFileSync('graph.png', body);
     } else {
        console.log(body)
     }
