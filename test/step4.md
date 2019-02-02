@@ -60,21 +60,20 @@ var options = {
 request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
         fs.writeFileSync('images/graph.png', body);
-
-        http.createServer(function(req, resp) {
-            fs.readFile('images/graph.png', function(err, data) {  
-                if (err) {
-                    throw err;
-                }        
-                res.setHeader('Content-type', 'image/png');
-                resp.end(data);
-            });
-        }).listen(8080);
     } else {
        console.log(body)
     }
 })
 
+http.createServer(function(request, response) {
+    fs.readFile('images/graph.png', function(error, data) {  
+        if (error) {
+            throw error;
+        }        
+        response.setHeader('Content-type', 'image/png');
+        response.end(data);
+    });
+}).listen(8080);
 
 </pre>
 
