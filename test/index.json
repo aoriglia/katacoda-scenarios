@@ -52,7 +52,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Display 80", "port": 80}],
+    "dashboards": [{"name": "Graph", "port": 8080}],
     "uilayout": "editor-terminal"
   },
   "backend": {

@@ -33,6 +33,7 @@ Copy the following code in the file *request.js*:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
 var fs   = require('fs');
+var http = require('http');
 
 var auth = require('./auth');
 var vars = require('./vars');
@@ -44,7 +45,7 @@ var headers = {
     'Content-Type':     'application/json',
     'accept':           'image/png',
     'accountToken':     auth.access_token
- 
+} 
 
 // Configure the request
 var options = {
@@ -58,12 +59,23 @@ var options = {
 // Execute the request
 request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-        fs.writeFileSync('graph.png', body);
+        fs.writeFileSync('images/graph.png', body);
     } else {
        console.log(body)
     }
 })
+
+http.createServer(function(request, response) {
+    fs.readFile('images/graph.png', function(err, data) {  
+        if (err) throw err;
+        response.setHeader('Content-type', 'image/png');
+        response.end(data);
+    });
+}.listen(8080);
+
 </pre>
+
+
 
 Execute the request:
 
