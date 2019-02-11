@@ -6,7 +6,7 @@ Copy the following content in the file *post.js* and replace **YOUR_ELEMENT_ID**
 <pre class="file" data-filename="post.js" data-target="replace">
 module.exports = { json : 
     {
-      'width': 600,
+      'width': 800,
       'height': 200,
       'title': 'My Awesome Test',
       'rasterType': 'PNG',
@@ -14,7 +14,7 @@ module.exports = { json :
       'yAxisLabel': '',
       'legend': true,
       'multiYAxis': true,
-      'theme': 'TRANSPARENT',
+      'theme': 'LIGHT',
       'elementIds': [
         {
           'id': 'YOUR_ELEMENT_ID',
