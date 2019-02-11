@@ -59,14 +59,14 @@ var options = {
 // Execute the request
 request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-        fs.writeFileSync('images/graph.png', body);
+        fs.writeFileSync('graph.png', body);
     } else {
        console.log(body)
     }
 })
 
 http.createServer(function(request, response) {
-    fs.readFile('images/graph.png', function(error, data) {  
+    fs.readFile('graph.png', function(error, data) {  
         if (error) {
             throw error;
         }        
@@ -82,3 +82,5 @@ http.createServer(function(request, response) {
 Execute the request:
 
 `node request.js`{{execute}}
+
+Then click on the tab named *Graph* to see the result.
