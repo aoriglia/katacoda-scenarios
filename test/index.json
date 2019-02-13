@@ -2,7 +2,7 @@
   "title": "NLW API Scenario",
   "description": "A simple scenario to learn how to use the NeoLoad Web API to display a simple graph",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "5 minutes",
   "details": {
     "steps": [
       {
