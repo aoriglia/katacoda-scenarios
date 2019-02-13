@@ -1,14 +1,14 @@
 
 The previous request gave us a list of tests.
 
-Copy the following content in the file *vars.js* and replace **YOUR_TEST_ID_HERE** with one of your choice.
+Select *vars.js* and copy the following content in this file. Replace **YOUR_TEST_ID_HERE** with one of test id of your choice.
 
 <pre class="file" data-filename="vars.js" data-target="replace">
 module.exports = { test_id : 'YOUR_TEST_ID_HERE' };
 </pre>
 
 Let's request the elements of type REQUEST from this test.
-Copy the following code in the file *request.js*:
+Select *request.js* and copy the following code in this file:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
 

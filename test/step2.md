@@ -3,14 +3,14 @@ To access to the API, we need to be authenticated.
 Copy a valid access token from your account.
 https://www.neotys.com/documents/doc/nlweb/latest/en/html/#24621.htm
 
-Copy the following content in the file *auth.js* and replace **YOUR_ACCESS_TOKEN_HERE** with your own.
+Select *auth.js* and copy the following content in this file. Replace **YOUR_ACCESS_TOKEN_HERE** with your own.
 
 <pre class="file" data-filename="auth.js" data-target="replace">
 module.exports = { access_token : 'YOUR_ACCESS_TOKEN_HERE' };
 </pre>
 
 Now, we have to request the list of the testIds using the operation */tests*.
-Copy the following code in the file *request.js*:
+Select *request.js* and copy the following code in this file:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
 var auth = require('./auth');

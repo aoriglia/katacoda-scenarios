@@ -1,7 +1,7 @@
 
 The previous request gave us the list of the test requests. Choose an element id.
 
-Copy the following content in the file *post.js* and replace **YOUR_ELEMENT_ID** the with one of your choice.
+Select *post.js* and copy the following content in this file. Replace **YOUR_ELEMENT_ID** with the element id of your choice.
 
 <pre class="file" data-filename="post.js" data-target="replace">
 module.exports = { json : 
@@ -29,7 +29,7 @@ module.exports = { json :
 
 Let's choose an element and try to get its specific average duration as a PNG image.
 
-Copy the following code in the file *request.js*:
+Select *request.js* and copy the following code in this file:
 
 <pre class="file" data-filename="request.js" data-target="replace">var request = require('request');
 var fs   = require('fs');
@@ -83,4 +83,4 @@ Execute the request:
 
 `node request.js`{{execute}}
 
-Then click on the tab named *Graph* to see the result.
+Then click on the tab named *Graph* to see the result image.
